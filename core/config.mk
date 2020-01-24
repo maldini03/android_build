@@ -1185,6 +1185,11 @@ ifneq ($(wildcard device/banana/sepolicy/common/sepolicy.mk),)
 ## last, to avoid accidental resetting by device configs
 $(eval include device/banana/sepolicy/common/sepolicy.mk)
 endif
+ifeq ($(call is-vendor-board-platform,QCOM),true)
+ifneq ($(wildcard device/banana/sepolicy/qcom/sepolicy.mk),)
+$(eval include device/banana/sepolicy/qcom/sepolicy.mk)
+endif
+endif
 endif
 
 # Include any vendor specific config.mk file
