@@ -36,18 +36,16 @@ except ImportError:
 
 # Config
 # set this to the default remote to use in repo
-default_rem = "omnirom"
+default_rem = "banana"
 # set this to the default revision to use (branch/tag name)
 default_rev = "android-7.0"
 # set this to the remote that you use for projects from your team repos
-# example fetch="https://github.com/omnirom"
-default_team_rem = "omnirom"
+# example fetch="https://github.com/bananadroid"
+default_team_rem = "banana"
 # this shouldn't change unless google makes changes
 local_manifest_dir = ".repo/local_manifests"
 # change this to your name on github (or equivalent hosting)
-android_team = "omnirom"
-# url to gerrit repository
-gerrit_url = "gerrit.omnirom.org"
+android_team = "banana"
 
 
 def check_repo_exists(git_data, device):
@@ -207,7 +205,7 @@ def parse_device_from_folder(device):
 
 
 def parse_dependency_file(location):
-    dep_file = "omni.dependencies"
+    dep_file = "banana.dependencies"
     dep_location = '/'.join([location, dep_file])
     if not os.path.isfile(dep_location):
         print("WARNING: %s file not found" % dep_location)
@@ -269,7 +267,7 @@ def create_dependency_manifest(dependencies):
 
 
 def create_common_dependencies_manifest(dependencies):
-    dep_file = "omni.dependencies"
+    dep_file = "banana.dependencies"
     common_list = []
     if dependencies is not None:
         for dependency in dependencies:
